@@ -15,6 +15,15 @@
 		5BB04B4926EDA3C4006E92B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B1E26EDA3C1006E92B1 /* ContentView.swift */; };
 		5BB04B4A26EDA3C4006E92B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB04B1F26EDA3C4006E92B1 /* Assets.xcassets */; };
 		5BB04B4B26EDA3C4006E92B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB04B1F26EDA3C4006E92B1 /* Assets.xcassets */; };
+		5BB04B6026F01197006E92B1 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B5F26F01197006E92B1 /* Members.swift */; };
+		5BB04B6126F01197006E92B1 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B5F26F01197006E92B1 /* Members.swift */; };
+		5BB04B6326F0CC5F006E92B1 /* CertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6226F0CC5F006E92B1 /* CertView.swift */; };
+		5BB04B6426F0CC5F006E92B1 /* CertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6226F0CC5F006E92B1 /* CertView.swift */; };
+		5BB04B6626F153CD006E92B1 /* VaccineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6526F153CD006E92B1 /* VaccineData.swift */; };
+		5BB04B6726F153CD006E92B1 /* VaccineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6526F153CD006E92B1 /* VaccineData.swift */; };
+		5BB04B6A26F1548D006E92B1 /* DataFetchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6926F1548D006E92B1 /* DataFetchers.swift */; };
+		5BB04B6B26F1548D006E92B1 /* DataFetchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6926F1548D006E92B1 /* DataFetchers.swift */; };
+		5BC7744526F1CF020069D3D7 /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7744426F1CF020069D3D7 /* LoginWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +47,9 @@
 		5BB04B1D26EDA3C1006E92B1 /* AU_COVID_VerifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AU_COVID_VerifierApp.swift; sourceTree = "<group>"; };
 		5BB04B1E26EDA3C1006E92B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5BB04B1F26EDA3C4006E92B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BB04B2426EDA3C4006E92B1 /* AU COVID Verifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU COVID Verifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB04B2426EDA3C4006E92B1 /* AU COVID Cert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU COVID Cert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB04B2726EDA3C4006E92B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BB04B2C26EDA3C4006E92B1 /* AU COVID Verifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU COVID Verifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB04B2C26EDA3C4006E92B1 /* AU COVID Cert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU COVID Cert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB04B2E26EDA3C4006E92B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB04B2F26EDA3C4006E92B1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		5BB04B3426EDA3C4006E92B1 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +58,13 @@
 		5BB04B3F26EDA3C4006E92B1 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB04B4326EDA3C4006E92B1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5BB04B4526EDA3C4006E92B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB04B5F26F01197006E92B1 /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
+		5BB04B6226F0CC5F006E92B1 /* CertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertView.swift; sourceTree = "<group>"; };
+		5BB04B6526F153CD006E92B1 /* VaccineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineData.swift; sourceTree = "<group>"; };
+		5BB04B6926F1548D006E92B1 /* DataFetchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchers.swift; sourceTree = "<group>"; };
+		5BC7744426F1CF020069D3D7 /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
+		5BC7744626F1D62B0069D3D7 /* AU COVID Cert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AU COVID Cert.entitlements"; sourceTree = "<group>"; };
+		5BC7744726F1D87F0069D3D7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,8 @@
 		5BB04B1726EDA3C1006E92B1 = {
 			isa = PBXGroup;
 			children = (
+				5BC7744726F1D87F0069D3D7 /* README.md */,
+				5BC7744626F1D62B0069D3D7 /* AU COVID Cert.entitlements */,
 				5BB04B1C26EDA3C1006E92B1 /* Shared */,
 				5BB04B2626EDA3C4006E92B1 /* iOS */,
 				5BB04B2D26EDA3C4006E92B1 /* macOS */,
@@ -98,8 +116,11 @@
 		5BB04B1C26EDA3C1006E92B1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5BC7744326F1CEF00069D3D7 /* UIComponents */,
+				5BB04B6826F15466006E92B1 /* Service */,
+				5BB04B5E26F0117E006E92B1 /* Models */,
+				5BB04B5D26F01160006E92B1 /* Views */,
 				5BB04B1D26EDA3C1006E92B1 /* AU_COVID_VerifierApp.swift */,
-				5BB04B1E26EDA3C1006E92B1 /* ContentView.swift */,
 				5BB04B1F26EDA3C4006E92B1 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -108,8 +129,8 @@
 		5BB04B2526EDA3C4006E92B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5BB04B2426EDA3C4006E92B1 /* AU COVID Verifier.app */,
-				5BB04B2C26EDA3C4006E92B1 /* AU COVID Verifier.app */,
+				5BB04B2426EDA3C4006E92B1 /* AU COVID Cert.app */,
+				5BB04B2C26EDA3C4006E92B1 /* AU COVID Cert.app */,
 				5BB04B3426EDA3C4006E92B1 /* Tests iOS.xctest */,
 				5BB04B3F26EDA3C4006E92B1 /* Tests macOS.xctest */,
 			);
@@ -151,12 +172,46 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		5BB04B5D26F01160006E92B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BB04B1E26EDA3C1006E92B1 /* ContentView.swift */,
+				5BB04B6226F0CC5F006E92B1 /* CertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BB04B5E26F0117E006E92B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BB04B5F26F01197006E92B1 /* Members.swift */,
+				5BB04B6526F153CD006E92B1 /* VaccineData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BB04B6826F15466006E92B1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5BB04B6926F1548D006E92B1 /* DataFetchers.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5BC7744326F1CEF00069D3D7 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5BC7744426F1CF020069D3D7 /* LoginWebView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BB04B2326EDA3C4006E92B1 /* AU COVID Verifier (iOS) */ = {
+		5BB04B2326EDA3C4006E92B1 /* AU COVID Cert (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BB04B4E26EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Verifier (iOS)" */;
+			buildConfigurationList = 5BB04B4E26EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Cert (iOS)" */;
 			buildPhases = (
 				5BB04B2026EDA3C4006E92B1 /* Sources */,
 				5BB04B2126EDA3C4006E92B1 /* Frameworks */,
@@ -166,14 +221,14 @@
 			);
 			dependencies = (
 			);
-			name = "AU COVID Verifier (iOS)";
+			name = "AU COVID Cert (iOS)";
 			productName = "AU COVID Verifier (iOS)";
-			productReference = 5BB04B2426EDA3C4006E92B1 /* AU COVID Verifier.app */;
+			productReference = 5BB04B2426EDA3C4006E92B1 /* AU COVID Cert.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5BB04B2B26EDA3C4006E92B1 /* AU COVID Verifier (macOS) */ = {
+		5BB04B2B26EDA3C4006E92B1 /* AU COVID Cert (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BB04B5126EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Verifier (macOS)" */;
+			buildConfigurationList = 5BB04B5126EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Cert (macOS)" */;
 			buildPhases = (
 				5BB04B2826EDA3C4006E92B1 /* Sources */,
 				5BB04B2926EDA3C4006E92B1 /* Frameworks */,
@@ -183,9 +238,9 @@
 			);
 			dependencies = (
 			);
-			name = "AU COVID Verifier (macOS)";
+			name = "AU COVID Cert (macOS)";
 			productName = "AU COVID Verifier (macOS)";
-			productReference = 5BB04B2C26EDA3C4006E92B1 /* AU COVID Verifier.app */;
+			productReference = 5BB04B2C26EDA3C4006E92B1 /* AU COVID Cert.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5BB04B3326EDA3C4006E92B1 /* Tests iOS */ = {
@@ -249,7 +304,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5BB04B1B26EDA3C1006E92B1 /* Build configuration list for PBXProject "AU COVID Verifier" */;
+			buildConfigurationList = 5BB04B1B26EDA3C1006E92B1 /* Build configuration list for PBXProject "AU COVID Cert" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -262,8 +317,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BB04B2326EDA3C4006E92B1 /* AU COVID Verifier (iOS) */,
-				5BB04B2B26EDA3C4006E92B1 /* AU COVID Verifier (macOS) */,
+				5BB04B2326EDA3C4006E92B1 /* AU COVID Cert (iOS) */,
+				5BB04B2B26EDA3C4006E92B1 /* AU COVID Cert (macOS) */,
 				5BB04B3326EDA3C4006E92B1 /* Tests iOS */,
 				5BB04B3E26EDA3C4006E92B1 /* Tests macOS */,
 			);
@@ -308,8 +363,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB04B6626F153CD006E92B1 /* VaccineData.swift in Sources */,
+				5BC7744526F1CF020069D3D7 /* LoginWebView.swift in Sources */,
+				5BB04B6A26F1548D006E92B1 /* DataFetchers.swift in Sources */,
 				5BB04B4826EDA3C4006E92B1 /* ContentView.swift in Sources */,
 				5BB04B4626EDA3C4006E92B1 /* AU_COVID_VerifierApp.swift in Sources */,
+				5BB04B6326F0CC5F006E92B1 /* CertView.swift in Sources */,
+				5BB04B6026F01197006E92B1 /* Members.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +377,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB04B6726F153CD006E92B1 /* VaccineData.swift in Sources */,
+				5BB04B6B26F1548D006E92B1 /* DataFetchers.swift in Sources */,
 				5BB04B4926EDA3C4006E92B1 /* ContentView.swift in Sources */,
 				5BB04B4726EDA3C4006E92B1 /* AU_COVID_VerifierApp.swift in Sources */,
+				5BB04B6426F0CC5F006E92B1 /* CertView.swift in Sources */,
+				5BB04B6126F01197006E92B1 /* Members.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,12 +407,12 @@
 /* Begin PBXTargetDependency section */
 		5BB04B3626EDA3C4006E92B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5BB04B2326EDA3C4006E92B1 /* AU COVID Verifier (iOS) */;
+			target = 5BB04B2326EDA3C4006E92B1 /* AU COVID Cert (iOS) */;
 			targetProxy = 5BB04B3526EDA3C4006E92B1 /* PBXContainerItemProxy */;
 		};
 		5BB04B4126EDA3C4006E92B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5BB04B2B26EDA3C4006E92B1 /* AU COVID Verifier (macOS) */;
+			target = 5BB04B2B26EDA3C4006E92B1 /* AU COVID Cert (macOS) */;
 			targetProxy = 5BB04B4026EDA3C4006E92B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -470,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AU COVID Cert.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VLX4VPK4N;
 				ENABLE_PREVIEWS = YES;
@@ -480,10 +545,11 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.whatsbeef.AU-COVID-Verifier";
-				PRODUCT_NAME = "AU COVID Verifier";
+				PRODUCT_NAME = "AU COVID Cert";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -492,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AU COVID Cert.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VLX4VPK4N;
 				ENABLE_PREVIEWS = YES;
@@ -502,10 +569,11 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.whatsbeef.AU-COVID-Verifier";
-				PRODUCT_NAME = "AU COVID Verifier";
+				PRODUCT_NAME = "AU COVID Cert";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -528,7 +596,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.whatsbeef.AU-COVID-Verifier";
-				PRODUCT_NAME = "AU COVID Verifier";
+				PRODUCT_NAME = "AU COVID Cert";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -552,7 +620,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.whatsbeef.AU-COVID-Verifier";
-				PRODUCT_NAME = "AU COVID Verifier";
+				PRODUCT_NAME = "AU COVID Cert";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -650,7 +718,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5BB04B1B26EDA3C1006E92B1 /* Build configuration list for PBXProject "AU COVID Verifier" */ = {
+		5BB04B1B26EDA3C1006E92B1 /* Build configuration list for PBXProject "AU COVID Cert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BB04B4C26EDA3C4006E92B1 /* Debug */,
@@ -659,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BB04B4E26EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Verifier (iOS)" */ = {
+		5BB04B4E26EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Cert (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BB04B4F26EDA3C4006E92B1 /* Debug */,
@@ -668,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BB04B5126EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Verifier (macOS)" */ = {
+		5BB04B5126EDA3C4006E92B1 /* Build configuration list for PBXNativeTarget "AU COVID Cert (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BB04B5226EDA3C4006E92B1 /* Debug */,

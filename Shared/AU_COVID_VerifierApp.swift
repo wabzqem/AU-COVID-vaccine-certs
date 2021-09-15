@@ -11,7 +11,7 @@ import SwiftUI
 struct AU_COVID_VerifierApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(members: [])
         }
     }
 }
