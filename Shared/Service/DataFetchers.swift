@@ -25,6 +25,7 @@ class QRCodeFetcher: ObservableObject {
 
 class VaccineStatusFetcher: ObservableObject {
     @Published var vaccineData: VaccineData?
+    @Published var errorMessage: String?
     
     func getVaccineData(irn: Int) {
         let request = URLRequest(url: URL(string: "https://www2.medicareaustralia.gov.au/moaapi/moa-ihs/record/cir/data/\(irn)")!)
@@ -34,6 +35,11 @@ class VaccineStatusFetcher: ObservableObject {
                     do {
                         self.vaccineData = try JSONDecoder().decode(VaccineData.self, from: data)
                     } catch {
+                        do {
+                            self.errorMessage = try JSONDecoder().decode(ErrorResponse.self, from: data).errorList.first?.description
+                        } catch {
+                            
+                        }
                         print("Couldn't fetch vaccine status")
                     }
                 }

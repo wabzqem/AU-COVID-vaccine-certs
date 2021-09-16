@@ -19,18 +19,25 @@ struct CertView: View {
     
     var body: some View {
         VStack {
-            VStack {
-                HStack {
-                    Text(member.memberDisplayName).padding()
-                    Text("DOB: \(dataFetcher.vaccineData?.immunisationRecordData.individualDetails.dateOfBirth ?? "Loading...")").padding()
-                }
-                Text("Last vaccine: \(dataFetcher.vaccineData?.immunisationRecordData.immunisationStatus.vaccineInfo.last?.vaccineBrand ?? "Loading...")").padding()
-            }.navigationTitle("COVID-19 Certificate").padding()
-            Image(uiImage: imageFetcher.image ?? UIImage())
-                .resizable()
-                .scaledToFit().padding()
-            Text(vaccineDetail)
-            Spacer(minLength: 100)
+            if (dataFetcher.vaccineData != nil) {
+                VStack {
+                    HStack {
+                        Text(member.memberDisplayName).font(.title2).padding()
+                        Text("DOB: \(dataFetcher.vaccineData?.immunisationRecordData.individualDetails.dateOfBirth ?? "")").font(.title2).padding()
+                    }
+                    Text("Last vaccine: \(dataFetcher.vaccineData?.immunisationRecordData.immunisationStatus.vaccineInfo.last?.vaccineBrand ?? "")").padding()
+                }.navigationTitle("COVID-19 Certificate").padding()
+                Image(uiImage: imageFetcher.image ?? UIImage())
+                    .resizable()
+                    .scaledToFit().padding()
+                Text(vaccineDetail)
+                Spacer(minLength: 100)
+            }
+            if let error = dataFetcher.errorMessage {
+                Text(error)
+            } else {
+                Text("Loading...")
+            }
         }.onAppear {
             if (imageFetcher.image == nil) {
                 imageFetcher.getQRCode(irn: member.memberIRN)

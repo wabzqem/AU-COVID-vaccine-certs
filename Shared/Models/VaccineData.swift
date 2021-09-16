@@ -32,3 +32,13 @@ struct VaccineInfo: Codable {
     var vaccineBrand: String
     var immunisationDate: String
 }
+
+struct ErrorResponse: Codable {
+    var errorList: [ErrorList]
+}
+
+struct ErrorList: Codable {
+    var type: String
+    var code: String
+    var description: String
+}
