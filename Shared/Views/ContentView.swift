@@ -11,9 +11,10 @@ import WebKit
 import Combine
 
 struct ContentView: View {
+    @State private var loginSuccess = false
     @State private var isPresented = true {
         didSet {
-            if !isPresented && members.count == 0 {
+            if !isPresented && members.count == 0 && loginSuccess {
                 fetchMembers()
             }
         }
@@ -31,17 +32,23 @@ struct ContentView: View {
             }
             .navigationTitle("Members")
             .toolbar {
-                Button("Logout") {
-                    WKWebView.init().configuration.websiteDataStore.removeData(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(), modifiedSince: Date(timeIntervalSince1970: 0)) {}
-                    HTTPCookieStorage.shared.removeCookies(since: Date(timeIntervalSince1970: 0))
-                    UserDefaults.standard.removeObject(forKey: "access_token")
-                    UserDefaults.standard.removeObject(forKey: "refresh_token")
-                    members = []
+                Button(loginSuccess ? "Logout" : "Login") {
+                    if (loginSuccess) {
+                        WKWebView.init().configuration.websiteDataStore.removeData(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(), modifiedSince: Date(timeIntervalSince1970: 0)) {}
+                        HTTPCookieStorage.shared.removeCookies(since: Date(timeIntervalSince1970: 0))
+                        UserDefaults.standard.removeObject(forKey: "access_token")
+                        UserDefaults.standard.removeObject(forKey: "refresh_token")
+                        members = []
+                        loginSuccess = false
+                    } else {
+                        isPresented = true
+                    }
                 }
             }
         }
         .sheet(isPresented: $isPresented) {
-            SAWebView {
+            SAWebView { success in
+                loginSuccess = success
                 isPresented = false
             }
         }

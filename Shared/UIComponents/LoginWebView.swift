@@ -11,10 +11,10 @@ import Combine
 import WebKit
 
 struct SAWebView: View {
-    var completionHandler: () -> Void
+    var completionHandler: (_ success: Bool) -> Void
     var body: some View {
-        LoginWebView() {
-            completionHandler()
+        LoginWebView() { success in
+            completionHandler(success)
         }
     }
 }
@@ -22,17 +22,17 @@ struct SAWebView: View {
 struct LoginWebView: UIViewRepresentable {
     
     var navigationHelper = WebViewHelper()
-    var completionHandler: () -> Void
+    var completionHandler: (_ success: Bool) -> Void
 
-    init(completionHandler: @escaping () -> Void) {
+    init(completionHandler: @escaping (_ success: Bool) -> Void) {
         self.completionHandler = completionHandler
     }
 
     func makeUIView(context: UIViewRepresentableContext<LoginWebView>) -> WKWebView {
         let webview = WKWebView()
         webview.navigationDelegate = navigationHelper
-        navigationHelper.completeHandler = {
-            completionHandler()
+        navigationHelper.completeHandler = { success in
+            completionHandler(success)
         }
         if let _ = UserDefaults.standard.string(forKey: "refresh_token") {
             navigationHelper.doOauth(webView: webview)
@@ -70,6 +70,7 @@ struct TokenResponse: Codable { // or Decodable
 
 class WebViewHelper: NSObject, WKNavigationDelegate, ObservableObject {
     private var loggedIn = false
+    var completeHandler: ((_ success: Bool) -> Void)?
     
     func doOauth(webView: WKWebView) {
         let refreshToken = UserDefaults.standard.string(forKey: "refresh_token")
@@ -113,11 +114,12 @@ class WebViewHelper: NSObject, WKNavigationDelegate, ObservableObject {
         doOauth(request, webView: webView)
     }
     
-    
-    var completeHandler: (() -> Void)?
-    
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let url = navigationAction.request.url {
+            if (url.getParameterValue(name: "_eventId") == "close") { // The close button in the top right
+                decisionHandler(.cancel)
+                completeHandler?(false)
+            }
             if url.scheme == "au.gov.my.medicare" {
                 if (url.containsParameter(name: "code")) {
                     guard let code = url.getParameterValue(name: "code") else {
@@ -180,9 +182,7 @@ class WebViewHelper: NSObject, WKNavigationDelegate, ObservableObject {
                         }
                     }
                 }
-                if let completeHandler = self.completeHandler {
-                    completeHandler()
-                }
+                self.completeHandler?(true)
             }
         }
     }

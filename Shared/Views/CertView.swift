@@ -14,7 +14,7 @@ struct CertView: View {
     @StateObject var dataFetcher = VaccineStatusFetcher()
     
     var vaccineDetail: String {
-        return "Valid From \(dataFetcher.vaccineData?.immunisationRecordData.immunisationStatus.vaccineInfo.last?.immunisationDate ?? "")"
+        return "Valid From \(dataFetcher.vaccineData?.immunisationRecordData.immunisationStatus.vaccineInfo.last?.immunisationDate ?? "Loading...")"
     }
     
     var body: some View {
@@ -22,9 +22,9 @@ struct CertView: View {
             VStack {
                 HStack {
                     Text(member.memberDisplayName).padding()
-                    Text("DOB: \(dataFetcher.vaccineData?.immunisationRecordData.individualDetails.dateOfBirth ?? "")").padding()
+                    Text("DOB: \(dataFetcher.vaccineData?.immunisationRecordData.individualDetails.dateOfBirth ?? "Loading...")").padding()
                 }
-                Text("Last vaccine: \(dataFetcher.vaccineData?.immunisationRecordData.immunisationStatus.vaccineInfo.last?.vaccineBrand ?? "")").padding()
+                Text("Last vaccine: \(dataFetcher.vaccineData?.immunisationRecordData.immunisationStatus.vaccineInfo.last?.vaccineBrand ?? "Loading...")").padding()
             }.navigationTitle("COVID-19 Certificate").padding()
             Image(uiImage: imageFetcher.image ?? UIImage())
                 .resizable()

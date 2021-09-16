@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 class QRCodeFetcher: ObservableObject {
@@ -14,7 +13,6 @@ class QRCodeFetcher: ObservableObject {
 
     func getQRCode(irn: Int) {
         let request = URLRequest(url: URL(string: "https://medicare.whatsbeef.net/?irn=\(irn)")!)
-        print("Requesting whatsbeef...")
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             if let data = data {
                 DispatchQueue.main.async {
