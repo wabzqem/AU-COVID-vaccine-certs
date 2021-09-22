@@ -24,6 +24,8 @@
 		5BB04B6A26F1548D006E92B1 /* DataFetchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6926F1548D006E92B1 /* DataFetchers.swift */; };
 		5BB04B6B26F1548D006E92B1 /* DataFetchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB04B6926F1548D006E92B1 /* DataFetchers.swift */; };
 		5BC7744526F1CF020069D3D7 /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC7744426F1CF020069D3D7 /* LoginWebView.swift */; };
+		5BF246F426F8BC2000C25855 /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF246F326F8BC2000C25855 /* PDFView.swift */; };
+		5BF246F526F8BC2000C25855 /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF246F326F8BC2000C25855 /* PDFView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		5BC7744426F1CF020069D3D7 /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
 		5BC7744626F1D62B0069D3D7 /* AU COVID Cert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AU COVID Cert.entitlements"; sourceTree = "<group>"; };
 		5BC7744726F1D87F0069D3D7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5BF246F326F8BC2000C25855 /* PDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 			children = (
 				5BB04B1E26EDA3C1006E92B1 /* ContentView.swift */,
 				5BB04B6226F0CC5F006E92B1 /* CertView.swift */,
+				5BF246F326F8BC2000C25855 /* PDFView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +372,7 @@
 				5BB04B6A26F1548D006E92B1 /* DataFetchers.swift in Sources */,
 				5BB04B4826EDA3C4006E92B1 /* ContentView.swift in Sources */,
 				5BB04B4626EDA3C4006E92B1 /* AU_COVID_VerifierApp.swift in Sources */,
+				5BF246F426F8BC2000C25855 /* PDFView.swift in Sources */,
 				5BB04B6326F0CC5F006E92B1 /* CertView.swift in Sources */,
 				5BB04B6026F01197006E92B1 /* Members.swift in Sources */,
 			);
@@ -377,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF246F526F8BC2000C25855 /* PDFView.swift in Sources */,
 				5BB04B6726F153CD006E92B1 /* VaccineData.swift in Sources */,
 				5BB04B6B26F1548D006E92B1 /* DataFetchers.swift in Sources */,
 				5BB04B4926EDA3C4006E92B1 /* ContentView.swift in Sources */,

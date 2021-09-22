@@ -10,17 +10,21 @@ import UIKit
 
 class QRCodeFetcher: ObservableObject {
     @Published var image: UIImage?
-
-    func getQRCode(irn: Int) {
+    
+    func getQRCode(irn: Int, completion: ((_ image: UIImage) -> Void)?) {
         let request = URLRequest(url: URL(string: "https://medicare.whatsbeef.net/?irn=\(irn)")!)
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             if let data = data {
                 DispatchQueue.main.async {
                     self.image = UIImage(data: data)
+                    if let completion = completion, let image = self.image {
+                        completion(image)
+                    }
                 }
             }
         }.resume()
     }
+    
 }
 
 class VaccineStatusFetcher: ObservableObject {

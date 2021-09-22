@@ -32,16 +32,22 @@ struct CertView: View {
                     .scaledToFit().padding()
                 Text(vaccineDetail)
                 Spacer(minLength: 100)
-            }
-            if let error = dataFetcher.errorMessage {
+            } else if let error = dataFetcher.errorMessage {
                 Text(error)
             } else {
                 Text("Loading...")
             }
         }.onAppear {
             if (imageFetcher.image == nil) {
-                imageFetcher.getQRCode(irn: member.memberIRN)
+                imageFetcher.getQRCode(irn: member.memberIRN, completion: nil)
                 dataFetcher.getVaccineData(irn: member.memberIRN)
+            }
+        }.toolbar {
+            HStack {
+                Text("")
+                NavigationLink(destination: PDFViewM(irn: member.memberIRN)) {
+                    Text("PDF")
+                }
             }
         }
     }
