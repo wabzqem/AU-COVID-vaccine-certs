@@ -20,7 +20,9 @@ struct PDFViewM: View {
                 PDFViewUI(pdfView: $pdfView, data: data, singlePage: true)
             }
         }.onAppear() {
-            self.data = try? Data(contentsOf: URL(string: "https://medicare.whatsbeef.net/pdf?irn=\(irn)")!)
+            DispatchQueue.init(label: "bgData").async {
+                self.data = try? Data(contentsOf: URL(string: "https://medicare.whatsbeef.net/pdf?irn=\(irn)")!)
+            }
         }.toolbar {
             Button(action: shareButton) {
                 Image(systemName: "square.and.arrow.up")
@@ -41,7 +43,7 @@ extension PDFDocument {
     func addImage(_ image: UIImage) {
         guard let page = page(at: 0) else { return }
         let box = page.bounds(for: .mediaBox)
-        let area = CGRect(x: 10, y: box.height - 138, width: 128, height: 128)
+        let area = CGRect(x: box.midX - 70, y: 15, width: 140, height: 140)
         let imageAnnotation = MyImageAnnotation(bounds: area, image: image)
         page.addAnnotation(imageAnnotation)
     }
@@ -91,6 +93,7 @@ struct PDFViewUI: UIViewRepresentable {
         if singlePage {
             pdfView.displayMode = .singlePage
         }
+        pdfView.autoScales = true
         QRCodeFetcher().getQRCode(irn: 4) { image in
             pdfView.document?.addImage(image)
         }
