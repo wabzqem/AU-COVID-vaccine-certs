@@ -119,6 +119,7 @@ class WebViewHelper: NSObject, WKNavigationDelegate, ObservableObject {
             if (url.getParameterValue(name: "_eventId") == "close") { // The close button in the top right
                 decisionHandler(.cancel)
                 completeHandler?(false)
+                return
             }
             if url.scheme == "au.gov.my.medicare" {
                 if (url.containsParameter(name: "code")) {
